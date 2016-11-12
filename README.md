@@ -9,3 +9,5 @@ To run just do `npm i -g gulp && npm i` and then `gulp`.
 Edit templates in the `templates` folder and the config files (`config.yaml` and files in `configs` folder).
 
 The config files are loaded from yaml to json, merged and then provided as context to the `swig` compiler. The output files will go in the `dist/<cluster>/<namespace>` folder.
+
+Pay attention to the `namespace: {{_ns_}}` part in the templates, which is what the whole system is based on. The `_ns_` (alias for `_namespace_`) and the `_env_` variables get populated respectively with the namespace name and the env (cluster) name in each template's compilation context.
