@@ -1,0 +1,3 @@
+var2: var 2 overwritten
+var3: some other value for tenant 2
+var4: some variable only in tenant 2

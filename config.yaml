@@ -1,0 +1,28 @@
+clusters:
+  test:
+    env_files:
+    - configs/env.test.yaml
+    namespaces:
+      tenant-test:
+        env_files:
+        - configs/ns.tenant-test.yaml
+        templates:
+        - services
+
+  prod:
+    env_files:
+    - configs/env.prod.yaml
+    namespaces:
+      tenant1:
+        env_files:
+        - configs/some-envs-for-prod-ns.yaml
+        - configs/ns.tenant1.yaml
+        # variables get overwritten
+        templates:
+        - services
+      tenant2:
+        env_files:
+        - configs/some-envs-for-prod-ns.yaml
+        - configs/ns.tenant2.yaml
+        templates:
+        - services
